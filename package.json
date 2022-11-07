@@ -1,0 +1,25 @@
+{
+  "name": "intelimoveis-be",
+  "version": "1.0.0",
+  "description": "Backend do sistema Intelimoveis. Desenvolvido para a gestão completa de uma imobiliária.",
+  "main": "src/index.js",
+  "author": "Alex Jason - La Publicité",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.0",
+    "express": "^4.18.0",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.7.3"
+  },
+  "scripts": {
+    "postinstall": "ls",
+    "dev": "npx nodemon src/index.js",
+    "teste": "npx nodemon teste.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.15"
+  }
+}

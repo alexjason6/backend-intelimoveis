@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS proprietarios (
 CREATE TABLE IF NOT EXISTS imoveis (
   cod_imovel SERIAL UNIQUE,
   numero_registro VARCHAR,
-  tipo VARCHAR NOT NULL,
+  tipo_imovel VARCHAR NOT NULL,
   nome VARCHAR NOT NULL,
   situacao VARCHAR NOT NULL,
   tipo_negocio VARCHAR NOT NULL,

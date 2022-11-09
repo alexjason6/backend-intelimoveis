@@ -19,10 +19,11 @@ class ImoveisControler {
     response.json(imovel);
   }
 
-  async showByBairro(request, response) {
-    const { bairro } = request.params;
+  async showSearch(request, response) {
+    const {tipo_negocio, tipo_imovel, bairro, cidade } = request.params;
+
     const orderByValue = request.query;
-    const imoveisByBairro = await ImoveisRepository.findByBairro(bairro, orderByValue);
+    const imoveisByBairro = await ImoveisRepository.findBySearch(tipo_negocio, tipo_imovel, bairro, cidade, orderByValue);
 
     if (!imoveisByBairro) {
       return response.status(404).json({ error: 'Nenhum imóvel encontrado.' });
@@ -46,7 +47,7 @@ class ImoveisControler {
   async create(request, response) {
     const {
       numero_registro,
-      tipo,
+      tipo_imovel,
       nome,
       situacao,
       tipo_negocio,
@@ -70,7 +71,7 @@ class ImoveisControler {
 
     const imovel = await ImoveisRepository.create({
       numero_registro,
-      tipo,
+      tipo_imovel,
       nome,
       situacao,
       tipo_negocio,
@@ -100,7 +101,7 @@ class ImoveisControler {
 
     const {
       numero_registro,
-      tipo,
+      tipo_imovel,
       nome,
       situacao,
       tipo_negocio,
@@ -130,7 +131,7 @@ class ImoveisControler {
 
     const imovel = await ImoveisRepository.update(cod_imovel, {
       numero_registro,
-      tipo,
+      tipo_imovel,
       nome,
       situacao,
       tipo_negocio,

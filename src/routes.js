@@ -8,7 +8,7 @@ const router = Router();
 // Routes for imoveis
 router.get('/imoveis', ImoveisControler.index);
 router.get('/imoveis/:cod_imovel', ImoveisControler.showImovel);
-router.get('/imoveis/:bairro', ImoveisControler.showByBairro);
+router.get('/imoveis/:tipo_negocio/:tipo_imovel/:bairro/:cidade', ImoveisControler.showSearch);
 router.get('/imoveis/:tipo_imovel', ImoveisControler.showByTipo);
 router.post('/imoveis', ImoveisControler.create);
 router.put('/imoveis/edita/:cod_imovel', ImoveisControler.update);

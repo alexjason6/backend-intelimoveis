@@ -1,4 +1,4 @@
-# Back-end em Node.JS do projeto Intelimoveis.
+# Intelimoveis  - Back-end em Node.JS do projeto.
 Intelimóveis é um projeto voltado para administração de imoveis para locação e venda, voltado para corretores de imóvel e imobiliárias.
 
 Para as imobiliárias e corretores será possível fazer o cadastro dos imóveis, gerenciamento do que será ou não exibido no site, gestão de contratos, boletos e vistorias.
